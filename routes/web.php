@@ -29,3 +29,6 @@ Route::prefix('admin')
   ->group(function(){
   Route::resource('workouts','WorkoutController');
 });
+
+Route::get('/workouts','WorkoutController@index')->name('workout.index');
+Route::get('/workouts{workout}','WorkoutController@show')->name('workout.show');

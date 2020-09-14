@@ -48,6 +48,10 @@
                 font-size: 84px;
             }
 
+            #workouts {
+              font-size: 40px;
+            }
+
             .links > a {
                 color: #636b6f;
                 padding: 0 25px;
@@ -81,7 +85,9 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                  <div class="links">
+                    <a id="workouts" href="{{ route('workout.index')}}">Workouts</a>
+                  </div>
                 </div>
 
                 <div class="links">

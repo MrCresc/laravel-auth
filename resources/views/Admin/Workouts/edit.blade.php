@@ -26,8 +26,6 @@
           @endforeach
         </select>
       </div>
-      {{-- <label>User ID:</label><br>
-      <input type="text" name="user_id" value="{{ old('user_id')}}" placeholder="user_id"> --}}
       <br>
       <br>
       <label>Name:</label><br>
@@ -46,11 +44,8 @@
       <input type="text" name="reps" value="{{ isset($workout->reps) ? $workout->reps : old('reps') }}" placeholder="reps">
       <br>
       <br>
-      <input type="submit" name="" value="save">
+      <input type="submit" name="" value="Save">
     </form>
   @endif
-
-
   <a href="{{ route('admin.workouts.index')}}">Torna alla home</a>
-
 @endsection

@@ -13,7 +13,7 @@
           <b>{{$workout->description}}</b>
         </li>
         <li><p>Reps: {{$workout->reps}}</p></li>
-        <li><a href="{{ route('admin.workouts.index')}}">Torna alla home</a></li>
+        <a href="{{ route('workout.index')}}">Torna alla home</a>
       </ul>
     </div>
   </div>

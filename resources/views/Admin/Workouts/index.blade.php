@@ -10,7 +10,13 @@
           <li><img src="{{$workout->imgurl}}" alt=""></li>
           <li><a href="{{route('admin.workouts.show', $workout)}}">Mostra esercizio del WO</a></li>
           @if ($logged_user->id === $workout->user->id)
-            <li><a href="{{route('admin.workouts.edit', $workout)}}">Modifica esercizio del WO</a></li>
+          <li><a href="{{route('admin.workouts.edit', $workout)}}">Modifica esercizio del WO</a></li>
+          <li><form action="{{route('admin.workouts.destroy',$workout)}}" method="post">
+            @csrf
+            @method('DELETE')
+            <input type="submit" value="Delete">
+            </form>
+          </li>
           @endif
         </ul>
       </div>
